@@ -1,0 +1,104 @@
+.hireme-page {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px; /* To account for navbar */
+    color: black;
+}
+
+.hireme-container {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 50px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+    margin: 0 20px;
+}
+
+.hireme-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hireme-container .tagline {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.hireme-container .tagline span {
+    font-weight: 600;
+    color: #000;
+}
+
+.hireme-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hireme-container input, .hireme-container textarea {
+    padding: 14px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hireme-container input:focus, .hireme-container textarea:focus {
+    border-color: #000;
+}
+
+.hireme-container button {
+    margin-top: 10px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hireme-container button:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    margin-top: 35px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.contact-info a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.icons {
+    margin-top: 15px;
+}
+
+.icons a {
+    margin: 0 10px;
+    font-size: 1.3rem;
+    color: #000;
+}
+
+.hireme-footer {
+    margin-top: 40px;
+    font-size: 0.85rem;
+    color: #777;
+}
