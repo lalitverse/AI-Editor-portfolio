@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Artist Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">LALIT HIRVEY &gt;</div>
+            <ul class="nav-links">
+                <li><a href="#work">Work</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-glass">Let's Talk</a>
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-content fade-in-up">
+            <span class="badge">PREMIUM AI VISUALS</span>
+            <h1 class="hero-title">CINEMATIC<br><span class="gradient-text">DIGITAL WORLDS</span></h1>
+            <p class="hero-subtitle">Exploring the intersection of artificial intelligence and cinematic visual
+                storytelling. Delivering high-impact digital experiences.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View Portfolio</a>
+                <a href="#contact" class="btn btn-glass">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="section-container">
+            <div class="section-header fade-in-up">
+                <h2>Featured Visuals</h2>
+                <p>A curated selection of cinematic projects and motion concepts.</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Projects will be populated dynamically or via hardcoded HTML later -->
+                <!-- We will add the images once we generate them -->
+                <div class="bento-card large fade-in-up">
+                    <div class="card-bg" style="background-image: url('assets/war_movie_scene.png');"></div>
+                    <div class="card-overlay">
+                        <span class="card-tag">WAR MOVIE SCENE</span>
+                        <h3>Epic Battlefield</h3>
+                    </div>
+                </div>
+                <div class="bento-card medium fade-in-up delay-1">
+                    <div class="card-bg" style="background-image: url('assets/cyberpunk_city.png');"></div>
+                    <div class="card-overlay">
+                        <span class="card-tag">ULTRA DETAILED</span>
+                        <h3>Cyberpunk City</h3>
+                    </div>
+                </div>
+                <div class="bento-card medium fade-in-up delay-2">
+                    <div class="card-bg" style="background-image: url('assets/alien_flora.png');"></div>
+                    <div class="card-overlay">
+                        <span class="card-tag">MACRO</span>
+                        <h3>Alien Flora</h3>
+                    </div>
+                </div>
+                <div class="bento-card large fade-in-up">
+                    <div class="card-bg" style="background-image: url('assets/neon_drift.png');"></div>
+                    <div class="card-overlay">
+                        <span class="card-tag">MOTION CONCEPT</span>
+                        <h3>Neon Drift</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-content fade-in-up">
+                    <span class="badge">ABOUT ME</span>
+                    <h2>Crafting The Unseen</h2>
+                    <p>I am a digital artist specializing in cinematic AI generation and motion design. My work revolves
+                        around creating deeply immersive visual experiences that push the boundaries of storytelling and
+                        visual art.</p>
+                    <p>Using cutting edge workflows, I blend imagination with bleeding-edge technology to craft worlds
+                        that inspire and captivate.</p>
+                </div>
+                <div class="about-stats fade-in-up delay-1">
+                    <div class="stat-box">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years of Design</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Worlds Created</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section" id="process">
+        <div class="section-container">
+            <div class="section-header fade-in-up">
+                <h2>The Workflow</h2>
+                <p>How we bring impossible visions to life.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-card fade-in-up">
+                    <div class="process-number">01</div>
+                    <h3>Conceptualization</h3>
+                    <p>Defining the mood, tone, and narrative direction. Developing prompt structures and visual
+                        anchors.</p>
+                </div>
+                <div class="process-card fade-in-up delay-1">
+                    <div class="process-number">02</div>
+                    <h3>Generation & Refinement</h3>
+                    <p>Iterative generation using advanced AI models. Inpainting, upscaling, and refining fine details.
+                    </p>
+                </div>
+                <div class="process-card fade-in-up delay-2">
+                    <div class="process-number">03</div>
+                    <h3>Post & Motion</h3>
+                    <p>Applying cinematic color grading, VFX compositing, and rendering final dynamic motion sequences.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container fade-in-up">
+            <h2 class="massive-text">READY TO CREATE?</h2>
+            <p>Let's collaborate on your next digital masterpiece.</p>
+            <a href="mailto:hello@example.com" class="btn btn-primary lg-btn">Start a Project</a>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

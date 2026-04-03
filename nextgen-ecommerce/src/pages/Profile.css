@@ -1,0 +1,348 @@
+.profile-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 80px);
+}
+
+/* Advanced UI Effects: Subtle lighting background */
+.profile-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(183, 75, 75, 0.15) 0%, transparent 60%);
+  filter: blur(100px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.profile-content-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+  background: rgba(20, 20, 22, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.profile-sidebar {
+  padding: 2rem 1.5rem;
+}
+
+.profile-sidebar-header h3 {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.profile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: transparent;
+  border: none;
+  color: #999;
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.nav-btn.active {
+  background: rgba(183, 75, 75, 0.1);
+  color: #b74b4b;
+  border: 1px solid rgba(183, 75, 75, 0.15);
+  box-shadow: 0 4px 12px rgba(183, 75, 75, 0.08);
+}
+
+.nav-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  margin: 1rem 0;
+}
+
+.logout-btn {
+  color: #ff5555;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 85, 85, 0.08);
+  color: #ff6b6b;
+}
+
+.profile-main-area {
+  padding: 3rem;
+  position: relative;
+  min-height: 500px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+/* Avatar Section - Clean and minimal */
+.profile-top-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+
+.profile-avatar-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* The blurred default avatar styling */
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: blur(1px) sepia(0.2) brightness(0.9);
+  transition: all 0.5s ease;
+}
+
+.profile-avatar-wrapper:hover .profile-avatar {
+  filter: blur(0px) sepia(0) brightness(1);
+}
+
+/* Soft glow border inside avatar wrapper */
+.avatar-inner-glow {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+/* Settings Form */
+.settings-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.glass-input-group label {
+  display: block;
+  color: #aaa;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.glass-input-group input {
+  width: 100%;
+  padding: 1.1rem 1.25rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.glass-input-group input:focus {
+  border-color: rgba(183, 75, 75, 0.5);
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 4px rgba(183, 75, 75, 0.1), inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.glass-input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Form Actions */
+.form-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-glass {
+  background: linear-gradient(135deg, rgba(183, 75, 75, 0.9), rgba(160, 50, 50, 0.9));
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 2.5rem;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 20px rgba(183, 75, 75, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.btn-glass:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(183, 75, 75, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, rgba(193, 85, 85, 1), rgba(170, 60, 60, 1));
+}
+
+.btn-glass:active {
+  transform: translateY(0);
+}
+
+/* Toasts and Others */
+.toast-glass {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(183, 75, 75, 0.4);
+  color: #fff;
+  font-weight: 500;
+  animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1), slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) 1.6s forwards;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translate(-50%, -20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 1; transform: translate(-50%, 0); }
+  to { opacity: 0; transform: translate(-50%, -20px); }
+}
+
+.glass-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #777;
+}
+
+.empty-icon {
+  color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.profile-orders {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.glass-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.glass-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(183, 75, 75, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.profile-order-title {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.profile-order-meta {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.profile-order-total {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.highlight {
+  color: #b74b4b;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .profile-container {
+    padding: 2rem 1.5rem;
+  }
+  .profile-content-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .profile-sidebar {
+    padding: 1.5rem;
+  }
+  .nav-btn {
+    padding: 0.8rem 1rem;
+  }
+  .profile-main-area {
+    padding: 2.5rem 1.5rem;
+  }
+  .profile-top-section {
+    margin-bottom: 2.5rem;
+  }
+}

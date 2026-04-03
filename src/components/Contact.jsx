@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import SocialIcons from './SocialIcons';
 
 const Contact = () => {
@@ -12,7 +12,6 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Usually you'd use EmailJS or Formspree here
         window.location.href = `mailto:lalithirvey838@gmail.com?subject=Portfolio Inquiry from ${formData.name}&body=${formData.message}`;
     };
 
@@ -32,31 +31,33 @@ const Contact = () => {
             <div className="contact-container">
                 <motion.div 
                     className="contact-info-block glass-card"
-                    initial={{ opacity: 0, x: -50 }}
+                    initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h3>Get In Touch</h3>
-                    <p>Ready to start your next big project? I'm currently open for new opportunities and freelance work. Let's create something extraordinary together.</p>
+                    <h3 style={{ fontSize: "2.8rem", marginBottom: "1.5rem" }}>Get In Touch</h3>
+                    <p style={{ fontSize: "1.5rem", color: "#ccc", lineHeight: 1.8, marginBottom: "4rem" }}>
+                        Ready to start your next big project? I'm currently open for new opportunities, collaborations, and freelance work. Let's create something extraordinary together.
+                    </p>
                     
                     <div className="contact-details">
-                        <div className="detail-item">
-                            <Mail className="detail-icon" />
-                            <span>lalithirvey838@gmail.com</span>
+                        <div className="detail-item" style={{ marginBottom: "2.5rem" }}>
+                            <div style={{ background: "rgba(183, 75, 75, 0.1)", padding: "1.5rem", borderRadius: "1rem" }}>
+                                <Mail className="detail-icon" size={24} />
+                            </div>
+                            <span style={{ fontSize: "1.6rem", marginLeft: "1.5rem" }}>lalithirvey838@gmail.com</span>
                         </div>
-                        <div className="detail-item">
-                            <Phone className="detail-icon" />
-                            <span>+91 Your Phone</span>
-                        </div>
-                        <div className="detail-item">
-                            <MapPin className="detail-icon" />
-                            <span>Available Worldwide (Remote)</span>
+                        <div className="detail-item" style={{ marginBottom: "2.5rem" }}>
+                            <div style={{ background: "rgba(183, 75, 75, 0.1)", padding: "1.5rem", borderRadius: "1rem" }}>
+                                <MapPin className="detail-icon" size={24} />
+                            </div>
+                            <span style={{ fontSize: "1.6rem", marginLeft: "1.5rem" }}>Available Worldwide (Remote)</span>
                         </div>
                     </div>
 
-                    <div className="contact-socials">
-                        <h4>Follow Me</h4>
+                    <div className="contact-socials" style={{ marginTop: "5rem" }}>
+                        <h4 style={{ fontSize: "1.8rem", color: "#bbb", marginBottom: "2rem" }}>Follow My Work</h4>
                         <SocialIcons />
                     </div>
                 </motion.div>
@@ -64,11 +65,12 @@ const Contact = () => {
                 <motion.form 
                     className="contact-form glass-card"
                     onSubmit={handleSubmit}
-                    initial={{ opacity: 0, x: 50 }}
+                    initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
+                    <h3 style={{ fontSize: "2.4rem", marginBottom: "2.5rem", color: "#fff" }}>Send me a message</h3>
                     <div className="input-group">
                         <input 
                             type="text" 
@@ -92,14 +94,14 @@ const Contact = () => {
                     <div className="input-group">
                         <textarea 
                             name="message" 
-                            rows="5" 
-                            placeholder="Tell me about your project..." 
+                            rows="6" 
+                            placeholder="Tell me about your project or inquiry..." 
                             required
                             onChange={handleChange}
                             value={formData.message}
                         ></textarea>
                     </div>
-                    <button type="submit" className="btn primary-btn submit-btn">Send Message</button>
+                    <button type="submit" className="btn primary-btn submit-btn" style={{ padding: "1.5rem", marginTop: "1rem" }}>Send Message</button>
                 </motion.form>
             </div>
         </section>

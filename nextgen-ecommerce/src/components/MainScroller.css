@@ -1,0 +1,54 @@
+/* Main container handles the unified CSS scroll snapping */
+.main-scroller-container {
+  height: calc(100vh - 78px); /* Full height minus exact Navbar header height */
+  overflow-y: auto;
+  
+  /* Upgraded for smoother non-aggressive snapping */
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+  outline: none; /* remove focus ring */
+  
+  /* Hardware acceleration reduction to prevent jitter */
+  transform: translateZ(0); 
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar for a cleaner cinematic experience but keep functionality */
+.main-scroller-container::-webkit-scrollbar {
+  width: 8px;
+}
+.main-scroller-container::-webkit-scrollbar-track {
+  background: rgba(5, 5, 5, 0.8);
+}
+.main-scroller-container::-webkit-scrollbar-thumb {
+  background: rgba(183, 75, 75, 0.5);
+  border-radius: 4px;
+}
+
+/* Each section takes the exact height of the scroller container */
+.snap-section {
+  height: 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: visible; /* Avoid trapping scroll inside nested containers */
+}
+
+/* For tall components like Shop, let their internal content scroll within the section */
+.snap-content-wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+}
+
+/* Custom scrollbar for inner content wrappers */
+.snap-content-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+.snap-content-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+.snap-content-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}

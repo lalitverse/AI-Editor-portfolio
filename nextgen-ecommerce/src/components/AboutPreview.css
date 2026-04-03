@@ -1,0 +1,132 @@
+.about-preview-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-preview-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  width: 100%;
+}
+
+.preview-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.preview-text-block h2 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.preview-description {
+  color: #a0a0a0;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.btn-explore-about {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #b74b4b;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-explore-about:hover {
+  background: rgba(183, 75, 75, 0.15);
+  box-shadow: 0 0 20px rgba(183, 75, 75, 0.4);
+}
+
+.preview-image-block {
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
+
+.img-wrap {
+  position: absolute;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(183, 75, 75, 0.2);
+  transition: transform 0.5s ease;
+}
+
+.img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%) contrast(120%);
+  transition: filter 0.5s ease;
+}
+
+.img-wrap:hover {
+  transform: translateY(-10px);
+  z-index: 5;
+}
+
+.img-wrap:hover img {
+  filter: grayscale(0%) contrast(110%);
+}
+
+.img-primary {
+  width: 320px;
+  height: 400px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.img-secondary {
+  width: 280px;
+  height: 350px;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.img-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 30px rgba(183, 75, 75, 0.3);
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .about-preview-content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: center;
+  }
+  .preview-text-block {
+    align-items: center;
+  }
+  .preview-image-block {
+    height: 400px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .img-primary { width: 60%; height: 300px; }
+  .img-secondary { width: 50%; height: 250px; }
+}

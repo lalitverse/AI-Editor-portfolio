@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+  
+  body {
+    @apply bg-background text-white font-sans antialiased overflow-x-hidden;
+  }
+
+  /* Deep Glowing Background Orbs */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -20%;
+    left: -10%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, rgba(2, 6, 23, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: -20%;
+    right: -10%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, rgba(2, 6, 23, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl overflow-hidden;
+  }
+  .glass-button {
+    @apply bg-white/5 border border-white/10 backdrop-blur-md text-white rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 hover:bg-white/10 hover:border-blue-400/40 hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(96,165,250,0.1)];
+  }
+  .solid-button {
+    @apply bg-white text-slate-950 rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 hover:bg-slate-200 hover:-translate-y-0.5 flex items-center justify-center;
+  }
+  .outline-button {
+    @apply bg-transparent border border-white/20 text-white rounded-full px-6 py-3 text-xs font-semibold tracking-widest uppercase transition-all duration-300 hover:bg-white/5 hover:border-blue-400 self-start;
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500;
+  }
+  .gradient-text-alt {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-slate-200 to-purple-500;
+  }
+  .badge {
+    @apply inline-block px-4 py-2 bg-blue-400/10 text-blue-400 border border-blue-400/20 rounded-full text-xs font-bold tracking-widest uppercase mb-6;
+  }
+}
