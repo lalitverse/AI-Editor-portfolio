@@ -5,15 +5,15 @@ import { ExternalLink } from 'lucide-react';
 const Projects = () => {
     const projects = [
         {
-            title: "NexGen E-Commerce",
+            title: "NextGen E-commerce",
             description: "A fully functional modern e-commerce platform with real-time inventory, secure payment gateways, and a blazing fast UI.",
             tech: ["React", "Node.js", "MongoDB", "Stripe"],
-            demoLink: "/nextgen-ecommerce/index.html",
-            githubLink: "https://github.com/whynotchotu/nextgen-ecommerce",
+            demoLink: "https://agent-69d21d9dce2a58eb--gaming-ecommerce-website.netlify.app", // paste live link here
+            githubLink: "https://github.com/whynotchotu/gaming-website", // paste GitHub link here
             image: "/project1.png"
         },
         {
-            title: "AI Video Editor",
+            title: "AI Editor Portfolio",
             description: "An advanced browser-based AI video editing suite with seamless effects, transitions, and timeline controls.",
             tech: ["React", "Node.js", "FFmpeg", "TailwindCSS"],
             demoLink: "/ai-video-editor/index.html",
@@ -48,10 +48,6 @@ const Projects = () => {
                     >
                         <div className="project-img-wrapper">
                             <img src={project.image} alt={project.title} loading="lazy" />
-                            <div className="project-overlay">
-                                <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="icon-link"><ExternalLink size={20} /></a>
-                                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="icon-link"><i className="fa-brands fa-github"></i></a>
-                            </div>
                         </div>
                         <div className="project-info">
                             <h3>{project.title}</h3>
@@ -60,6 +56,14 @@ const Projects = () => {
                                 {project.tech.map((tech, i) => (
                                     <span key={i} className="tech-badge">{tech}</span>
                                 ))}
+                            </div>
+                            <div className="project-links-container">
+                                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-btn secondary">
+                                    <i className="fa-brands fa-github"></i> GitHub
+                                </a>
+                                <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-btn primary">
+                                    <ExternalLink size={18} /> Live Demo
+                                </a>
                             </div>
                         </div>
                     </motion.div>

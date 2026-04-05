@@ -640,6 +640,47 @@ nav a.active {
     margin-bottom: 2rem;
 }
 
+.project-links-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.project-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: 3rem;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.project-btn.primary {
+    background: var(--main-color);
+    color: #fff;
+    border: 1px solid var(--main-color);
+}
+
+.project-btn.primary:hover {
+    background: transparent;
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.project-btn.secondary {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-btn.secondary:hover {
+    border-color: var(--main-color);
+    color: var(--main-color);
+    box-shadow: 0 0 10px rgba(183, 75, 75, 0.2);
+}
+
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
