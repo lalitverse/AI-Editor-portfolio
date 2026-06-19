@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
+import img1 from '../assets/Screenshot 2026-06-19 234339.png';
+import img2 from '../assets/image.png';
+import img3 from '../assets/Screenshot 2026-06-19 234840.png';
+import img4 from '../assets/Screenshot 2026-06-19 235001.png';
 
 const Projects = () => {
     const projects = [
@@ -10,7 +14,7 @@ const Projects = () => {
             tech: ["React", "Node.js", "MongoDB", "Stripe"],
             demoLink: "https://agent-69d21d9dce2a58eb--gaming-ecommerce-website.netlify.app", // paste live link here
             githubLink: "https://github.com/whynotchotu/gaming-website", // paste GitHub link here
-            image: "/src/assets/Screenshot 2026-06-19 234339.png"
+            image: img1
         },
         {
             title: "AI Editor Portfolio",
@@ -18,7 +22,7 @@ const Projects = () => {
             tech: ["React", "Node.js", "FFmpeg", "TailwindCSS"],
             demoLink: "/ai-video-editor/index.html",
             githubLink: "https://github.com/whynotchotu/AI-Editor-portfolio",
-            image: "/src/assets/image.png"
+            image: img2
         },
         {
             title: "K72 Clone",
@@ -26,7 +30,7 @@ const Projects = () => {
             tech: ["HTML", "CSS", "JavaScript", "GSAP", "ScrollTrigger"],
             demoLink: "https://k72-ca-pu4d.vercel.app/",
             githubLink: "https://github.com/lalitverse/k72.ca",
-            image: "/src/assets/Screenshot 2026-06-19 234840.png"
+            image: img3
         },
         {
             title: "Dogstudio Clone",
@@ -34,7 +38,7 @@ const Projects = () => {
             tech: ["HTML", "CSS", "JavaScript", "GSAP", "Locomotive Scroll"],
             demoLink: "https://dogstudio-co.vercel.app",
             githubLink: "https://github.com/lalitverse/dogstudio.co",
-            image: "/src/assets/Screenshot 2026-06-19 235001.png"
+            image: img4
         }
     ];
 

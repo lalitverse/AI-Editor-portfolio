@@ -37,7 +37,7 @@ const Navbar = () => {
                 <span>Lalit</span>
             </a>
 
-            <div className="mobile-menu-btn" onClick={toggleMenu} style={{ display: 'none', cursor: 'pointer', zIndex: 1000, color: 'white' }}>
+            <div className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle Navigation" role="button" tabIndex={0} style={{ display: 'none', cursor: 'pointer', zIndex: 1000, color: 'white' }}>
                 {menuOpen ? <X size={28} /> : <Menu size={28} />}
             </div>
 
