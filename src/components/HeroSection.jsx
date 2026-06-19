@@ -78,8 +78,9 @@ const HeroSection = () => {
                 </motion.div>
                 
                 <motion.div className="btn-group" variants={itemVariants}>
-                    <a href="#contact" className="btn primary-btn">Hire me</a>
+                    <a href="#contact" className="btn primary-btn">Hire Me</a>
                     <a href="#projects" className="btn outline-btn">View Projects</a>
+                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn outline-btn">Resume</a>
                 </motion.div>
             </motion.div>
         </section>

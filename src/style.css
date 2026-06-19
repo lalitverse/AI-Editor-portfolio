@@ -552,7 +552,7 @@ nav a.active {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
 }
 
@@ -562,6 +562,9 @@ nav a.active {
     border-radius: 1.5rem;
     overflow: hidden;
     transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-card:hover {
@@ -626,6 +629,9 @@ nav a.active {
 
 .project-info {
     padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .project-info h3 {
@@ -643,7 +649,8 @@ nav a.active {
 .project-links-container {
     display: flex;
     gap: 1.5rem;
-    margin-top: 2.5rem;
+    margin-top: auto;
+    padding-top: 2.5rem;
 }
 
 .project-btn {
@@ -953,8 +960,39 @@ nav a.active {
         padding: 8rem 5% 6rem;
     }
 
+    .mobile-menu-btn {
+        display: block !important;
+    }
+
     nav {
-        display: none; /* In a real app, add a hamburger menu here */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(5, 5, 5, 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 2rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: 0.4s ease-in-out;
+    }
+
+    nav.nav-open {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 1.8rem;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
     }
 
     .experience-grid {
@@ -975,7 +1013,67 @@ nav a.active {
         width: 90%;
     }
     
-    .stats-grid {
+    .stats-grid,
+    .projects-grid,
+    .experience-grid {
         grid-template-columns: 1fr;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .btn-group .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 55%;
+    }
+    .home-content h1 {
+        font-size: 4rem;
+    }
+    .typing-text {
+        font-size: 2.2rem;
+    }
+    .section-header h2 {
+        font-size: 3.5rem;
+    }
+    .glass-card {
+        padding: 2rem;
+    }
+    .project-card {
+        margin: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    html {
+        font-size: 50%;
+    }
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+    .typing-text {
+        font-size: 1.8rem;
+    }
+    .btn-group .btn {
+        font-size: 1.6rem;
+    }
+    section {
+        padding: 6rem 4% 4rem;
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 45%;
+    }
+    .home-content h1 {
+        font-size: 3rem;
     }
 }

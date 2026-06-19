@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -24,6 +26,10 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <header className={scrolled ? 'nav-scrolled' : ''}>
             <a href="#home" className="logo">
@@ -31,13 +37,17 @@ const Navbar = () => {
                 <span>Lalit</span>
             </a>
 
-            <nav>
-                <a href="#home" className={activeSection === 'home' ? 'active' : ''}>Home</a>
-                <a href="#about" className={activeSection === 'about' ? 'active' : ''}>About</a>
-                <a href="#skills" className={activeSection === 'skills' ? 'active' : ''}>Skills</a>
-                <a href="#projects" className={activeSection === 'projects' ? 'active' : ''}>Projects</a>
-                <a href="#experience" className={activeSection === 'experience' ? 'active' : ''}>Experience</a>
-                <a href="#contact" className={activeSection === 'contact' ? 'active' : ''}>Contact</a>
+            <div className="mobile-menu-btn" onClick={toggleMenu} style={{ display: 'none', cursor: 'pointer', zIndex: 1000, color: 'white' }}>
+                {menuOpen ? <X size={28} /> : <Menu size={28} />}
+            </div>
+
+            <nav className={menuOpen ? 'nav-open' : ''}>
+                <a href="#home" className={activeSection === 'home' ? 'active' : ''} onClick={() => setMenuOpen(false)}>Home</a>
+                <a href="#about" className={activeSection === 'about' ? 'active' : ''} onClick={() => setMenuOpen(false)}>About</a>
+                <a href="#skills" className={activeSection === 'skills' ? 'active' : ''} onClick={() => setMenuOpen(false)}>Skills</a>
+                <a href="#projects" className={activeSection === 'projects' ? 'active' : ''} onClick={() => setMenuOpen(false)}>Projects</a>
+                <a href="#experience" className={activeSection === 'experience' ? 'active' : ''} onClick={() => setMenuOpen(false)}>Experience</a>
+                <a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={() => setMenuOpen(false)}>Contact</a>
             </nav>
         </header>
     );

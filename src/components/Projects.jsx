@@ -10,7 +10,7 @@ const Projects = () => {
             tech: ["React", "Node.js", "MongoDB", "Stripe"],
             demoLink: "https://agent-69d21d9dce2a58eb--gaming-ecommerce-website.netlify.app", // paste live link here
             githubLink: "https://github.com/whynotchotu/gaming-website", // paste GitHub link here
-            image: "/project1.png"
+            image: "/src/assets/Screenshot 2026-06-19 234339.png"
         },
         {
             title: "AI Editor Portfolio",
@@ -18,7 +18,23 @@ const Projects = () => {
             tech: ["React", "Node.js", "FFmpeg", "TailwindCSS"],
             demoLink: "/ai-video-editor/index.html",
             githubLink: "https://github.com/whynotchotu/AI-Editor-portfolio",
-            image: "/project2.png"
+            image: "/src/assets/image.png"
+        },
+        {
+            title: "K72 Clone",
+            description: "A premium modern website clone inspired by K72 with smooth scrolling, advanced animations, interactive sections, responsive layouts, and high-end visual design.",
+            tech: ["HTML", "CSS", "JavaScript", "GSAP", "ScrollTrigger"],
+            demoLink: "https://k72-ca-pu4d.vercel.app/",
+            githubLink: "https://github.com/lalitverse/k72.ca",
+            image: "/src/assets/Screenshot 2026-06-19 234840.png"
+        },
+        {
+            title: "Dogstudio Clone",
+            description: "A visually immersive creative agency website clone featuring cinematic animations, smooth transitions, interactive storytelling, and responsive user experience.",
+            tech: ["HTML", "CSS", "JavaScript", "GSAP", "Locomotive Scroll"],
+            demoLink: "https://dogstudio-co.vercel.app",
+            githubLink: "https://github.com/lalitverse/dogstudio.co",
+            image: "/src/assets/Screenshot 2026-06-19 235001.png"
         }
     ];
 
